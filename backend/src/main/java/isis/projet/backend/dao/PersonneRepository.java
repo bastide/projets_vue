@@ -33,7 +33,7 @@ public interface PersonneRepository extends JpaRepository<Personne, Integer> {
         FROM Personne pers
         LEFT JOIN Participation p ON pers = p.personne AND p.projet.fin IS NULL
         GROUP BY p.personne
-        ORDER BY p.personne.matricule
+        ORDER BY p.personne.nom
         """)
     List<ParticipationInfo> findAllParticipationInfo();
 }
