@@ -1,19 +1,19 @@
-# Un "MonoRepo" avec Spring Boot, vue.js et Bootstrap
+# Un "MonoRepo" avec Spring Boot et vue.js
 
 ## Structure du projet
 
 ```
 monorepo
-├─┬ backend     → backend module with Spring Boot code
+├─┬ backend     → backend Spring Boot 
 │ ├── src
 │ └── pom.xml
-├─┬ frontend    → frontend module with Vue.js code
+├─┬ frontend    → frontend Vue.js 
 │ ├── src
 │ └── pom.xml
-└── pom.xml     → Maven parent pom managing both modules
+└── pom.xml     → Maven pom.xml "parent" qui construit le projet fullstack
 ```
 
-## Pour exécuter le projet
+## Pour construire le projet
 
 A la racine du projet:
 
@@ -22,7 +22,7 @@ mvn clean install
 ```
 
 Cette commande va :
-- Installer node et npm.
+- Installer node et npm pour construire le frontend.
 - construire le frontend en utilisant les outils vue.js.
 - recopier ensuite les fichiers dans le backend.
 - construire le backend.
@@ -46,7 +46,6 @@ Pour faciliter le développement du frontend, on peut lancer le serveur de déve
 cd frontend
 npm run dev
 ```
+## Déployer sur un cloud
 
-## Browser developer tools extension
-
-Optionnel : installer vue-devtools Browser extension <https://devtools.vuejs.org/> dans votre navigateur pour débugger plus facilement le front-end.
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=monorepo&repository=bastide%2Fmonorepo&branch=master&instance_type=free)
