@@ -36,8 +36,7 @@ public class Personne {
     private List<Participation> affectations = new ArrayList<>();
 
     @ToString.Exclude
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn
+    @ManyToOne
     private Personne superieur;
 
     @ToString.Exclude

@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 import java.util.NoSuchElementException;
 
 @RestController
-@RequestMapping("/participations")
+@RequestMapping("/api/gestion/participation")
 public class ParticipationController {
 
     private final ParticipationProjet participationService;
